@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Combine
 import SwiftUI
 
 final class RightFlowCoordinator: FlowCoordinator {
@@ -21,7 +20,7 @@ final class RightFlowCoordinator: FlowCoordinator {
     }
 
     func start() {
-        @State var featureStore = FeatureStore(service: FeatureService())
+        let featureStore = FeatureStore(service: FeatureService())
         let vc = UIHostingController(rootView: RightFlowScreen(onOutput: handleOutput).environment(featureStore))
         self.navigationController.setViewControllers([vc], animated: false)
     }

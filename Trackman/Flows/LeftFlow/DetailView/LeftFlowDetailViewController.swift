@@ -107,7 +107,6 @@ class LeftFlowDetailViewController: UIViewController {
             case .ready:
                 self?.finishLoading()
             case .error:
-                self?.imageView.backgroundColor = .red
                 self?.finishLoading()
             }
         }
