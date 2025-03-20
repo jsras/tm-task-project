@@ -48,9 +48,4 @@ final class TabBarCoordinator: CompositionCoordinator {
         self.leftTabCoordinator = leftTabCoordinator
         self.rightTabCoordinator = rightTabCoordinator
     }
-    
-    func dismissAll(completion: @escaping () -> Void) {
-        childCoordinators.forEach { $0.finish() }
-        tabBarController.dismiss(animated: true, completion: completion)
-    }
 }
